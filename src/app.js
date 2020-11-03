@@ -36,14 +36,14 @@ app.get('/a-propos', (req, res) => {
 
 app.get('/aide', (req, res) => {
     res.render('aide', {
-        message: 'Cette app vous permet d\'avoir les infos sur la météo selon votre localité........!!!',
-        contact: 'Contact mail id: dera.amedee@gmail.com',
+        message: 'Cette app vous permet d\'avoir les infos sur la météo selon votre localité.',
+        contact: 'Pour me contacter: dera.amedee@gmail.com',
         title: 'Aide',
         name:'Amédée DERA'
     })
 })
 
-app.get('/météo',  (req, res) => {
+app.get('/meteo',  (req, res) => {
     if(!req.query.address){
         return res.send({
             error: 'Entrer une localité...'
