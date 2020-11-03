@@ -69,17 +69,6 @@ app.get('/meteo',  (req, res) => {
     })
 })
 
-app.get('/products', (req, res) => {
-    if(!req.query.search){
-       return res.send({
-            error: 'Vous devez entrer un mot clé'
-        })
-    }
-    console.log(req.query)
-    res.send({
-        product: []
-    })
-})
 
 app.get('/aide/*', (req, res) => {
     res.render('404', {
