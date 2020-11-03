@@ -5,7 +5,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3001
 
 //Define  paths for Express config
 const pathPublic = path.join(__dirname, '../public')
@@ -43,7 +43,7 @@ app.get('/aide', (req, res) => {
     })
 })
 
-app.get('/meteo',  (req, res) => {
+app.get('/weather',  (req, res) => {
     if(!req.query.address){
         return res.send({
             error: 'Entrer une localité...'
